@@ -15,6 +15,7 @@ const port = 5000;
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
+
 app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
