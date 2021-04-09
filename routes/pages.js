@@ -24,4 +24,25 @@ router.get('/login', (req, res) => {
 });
 
 
+router.get('/club',checkToken, (req, res) => {
+    res.render('club');
+});
+
+
+router.get('/home',checkToken, (req, res) => {
+    var query = 'SELECT * FROM tag_details;'
+
+    myConn.query(query,(err,category)=>{
+        if(err){
+            console.log(err);
+        }
+        else{
+           
+            res.render('home',{category});
+
+        }
+    });
+
+});
+
 module.exports = router;
