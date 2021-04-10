@@ -100,7 +100,10 @@ router.post('/askquestion-:tag_id', checkToken,(req, res)=>{
 
     var tag_id = req.params.tag_id;
     var ques_text = req.body.ques_text;
-    console.log(tag_id);
+    
+    if(ques_text.length == 0){
+        return res.redirect(`questions-${tag_id}`);
+    }
 
     var query = `INSERT INTO question_details SET user_id = '${req.user_id}', ques_text = '${ques_text}', q_tag = '${tag_id}';`
 
@@ -161,6 +164,12 @@ router.get('/answers-:id', checkToken,(req, res)=>{
                     console.log(err);
                 }
                 else{
+
+                    
+                    if(answerslist.length == 0){
+                        return res.render('answerthread',{questions,answerslist});
+                     }
+
                      var query3 = `SELECT username FROM user_details WHERE user_id=' ${answerslist[0].ans_by}';`
 
                     myConn.query(query3,(err,userdetails)=>{
