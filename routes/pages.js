@@ -23,6 +23,7 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+router.get('/logout',authController.logout);
 
 router.get('/club',checkToken, (req, res) => {
     res.render('club');
@@ -160,27 +161,22 @@ router.get('/answers-:id', checkToken,(req, res)=>{
                     console.log(err);
                 }
                 else{
-                    // // var query3 = `SELECT * FROM user_details WHERE user_id='${ans_by}';`
+                     var query3 = `SELECT username FROM user_details WHERE user_id=' ${answerslist[0].ans_by}';`
 
-                    // myConn.query(query3,(err,userdetails)=>{
-                    //     if(err){
-                    //         console.log(err);
-                    //     }
-                    //     else{
-                    //         var data = {questions,answerslist, userdetails};
-                    //         console.log(data);
-                    //         console.log(questions);
-                    //         console.log(answerslist);
-                    //         console.log(userdetails);
-                    //         res.render('answerthread',data);
-                    //     }
-                    // });
+                    myConn.query(query3,(err,userdetails)=>{
+                        if(err){
+                            console.log(err);
+                        }
+                        else{
+                            var data = {questions,answerslist, userdetails};
+                            console.log(data);
+                            console.log(questions);
+                            console.log(answerslist);
+                            console.log(userdetails);
+                            res.render('answerthread',data);
+                        }
+                    });
         
-                    var data = {questions,answerslist};
-                    console.log(data);
-                    console.log(questions);
-                    console.log(answerslist);
-                    res.render('answerthread',data);
                 }
             });
 
@@ -196,7 +192,7 @@ router.post('/addanswer-:ques_id', checkToken,(req, res)=>{
     var ans_text = req.body.ans_text;
     console.log(ques_id);
 
-    var query = `INSERT INTO answer_details SET ans_text = '${ans_text}', ques_id = '${ques_id}';`
+    var query = `INSERT INTO answer_details SET ans_text = '${ans_text}', ques_id = '${ques_id},', ans_by = '${req.user_id}';`
 
     myConn.query(query,(err,result) =>{
         if(err){
