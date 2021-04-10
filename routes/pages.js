@@ -45,4 +45,19 @@ router.get('/home',checkToken, (req, res) => {
 
 });
 
+router.get('/dashboard',checkToken, (req, res) => {
+
+    var query = `SELECT * FROM user_details WHERE user_id = ${req.user_id}`;
+
+    myConn.query(query,(err,userData) => {
+        if(err){
+            console.log(err);
+        }
+        else{
+            res.render('dashboard',{userData});
+
+        }
+    });
+});
+
 module.exports = router;
