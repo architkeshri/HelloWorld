@@ -35,7 +35,7 @@
 <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.ejs" class="logo d-flex align-items-center">
+      <a href="/" class="logo d-flex align-items-center">
         <img src="assets/img/logo.jpeg" alt="">
         <span>Sangam</span>
 
@@ -48,7 +48,7 @@
         <ul>
           <li><a class="nav-link scrollto" href="/home">Community</a></li>
           <li><a class="nav-link scrollto" href="/logout">logout</a></li>
-          <li><a class="nav-link scrollto" href="/clubs">Clubs</a></li>
+          <li><a class="nav-link scrollto" href="/club">Clubs</a></li>
 
           <li><span class="getstarted scrollto">Dashboard</span></li>
         </ul>
@@ -73,10 +73,9 @@
 			<span><%= userData[0].conatct %></span>
 			</div>
 			<div>
-			<a href="#" target="_blank"><img src="https://img.icons8.com/plasticine/100/000000/facebook-new.png" width="50" height="50" /></a>
-			<a href="#" target="_blank"><img src="https://img.icons8.com/fluent/48/000000/twitter.png" width="45" height="45" /></a>
-			<a href="#" target="_blank"><img src="https://img.icons8.com/ios-filled/48/000000/github.png" width="45" height="45" /></a>
-			<a href="#" target="_blank"><img src="https://img.icons8.com/fluent/50/000000/linkedin.png" width="45" height="45" /></a>
+			<a href="<%= userData[0].fb_link %>" target="_blank"><img src="https://img.icons8.com/plasticine/100/000000/facebook-new.png" width="50" height="50" /></a>
+			<a href="<%= userData[0].git_link %>" target="_blank"><img src="https://img.icons8.com/ios-filled/48/000000/github.png" width="45" height="45" /></a>
+			<a href="<%= userData[0].lin_link %>" target="_blank"><img src="https://img.icons8.com/fluent/50/000000/linkedin.png" width="45" height="45" /></a>
 			</div>
         </div>
         <div class="col-md-5 border-right" >
