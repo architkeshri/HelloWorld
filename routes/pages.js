@@ -208,4 +208,13 @@ router.post('/addanswer-:ques_id', checkToken,(req, res)=>{
     });
     
 });
+
+
+
+
+router.get('/campustour',checkToken, (req, res) => {
+    res.render('campustour');
+});
+
+
 module.exports = router;
