@@ -11,6 +11,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <style>
+
     /* LogIn CSS */
     section {
     padding: 60px 0;
@@ -379,7 +380,7 @@
   }
   
     .login-container {
-      margin-top: 5%;
+      margin-top: 10%;
       margin-bottom: 5%;
     }
 
@@ -400,12 +401,15 @@
     }
 
     .btnSubmit {
-      width: 50%;
+      margin-left:30%;
+      width: 35%;
+      font-size: large;
       border-radius: 1rem;
       padding: 1.5%;
       border: none;
       cursor: pointer;
     }
+  
 
     .login-form-2 .btnSubmit {
       font-weight: 600;
@@ -423,6 +427,25 @@
     }
 
     /* Registration Form CSS */
+    #register{
+      display:none;
+      position: absolute;
+      top:8%;
+      left:10%;
+    }
+    #cancel{
+    background-color:transparent;
+    padding:15px;
+    border-radius: 15px;
+    margin: 0%;
+    float: right;
+    font-size: 16px;
+    border: none;
+}
+#cancel:hover{
+    cursor: pointer;
+   color: tomato;
+}
     .register {
       background: -webkit-linear-gradient(left, #3931af, #00c6ff);
       margin-top: 3%;
@@ -558,11 +581,7 @@
       </a>
 
       <nav id="navbar" class="navbar">
-        <ul>
-            <a class="getstarted scrollto" href="/login">Get Started</a>
-          </li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        
       </nav>
       <!-- .navbar -->
     </div>
@@ -583,7 +602,7 @@
             </h4>
           <% } %>
         
-          <h3>LogIn</h3>
+          <h3>Login</h3>
           <form action="/auth/login" method="POST">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Email ID *" name ="email" value="" />
@@ -599,7 +618,7 @@
               <input type="submit" class="btnSubmit" value="Login" />
             </div>
             
-            <a class="signup" href="#signup">Don't have an account? SignUp Now!
+            <span style="color:white">Don't have an account?</span> <a class="signup" href="#signup" onclick="check('register')">SignUp Now!
             </a>
           </form>
         </div>
@@ -616,7 +635,8 @@
   <section id="signup" class="hero d-flex align-items-center">
 
 
-    <div class="container register">
+    <div id="register" class="container register">
+      <button id="cancel" onclick="check('register')">X</button>
       <div class="row">
         <div class="col-md-3 register-left">
           
@@ -722,7 +742,17 @@
     </footer>
     <!-- ====== End Footer  ======= -->
 
-
+    <script>
+      function check(et){
+          var element = document.getElementById(et), style = window.getComputedStyle(element);
+          console.log(style.getPropertyValue('display'));
+         if(style.getPropertyValue('display') == "block")
+            document.getElementById(et).style.display = "none";
+          else
+          document.getElementById(et).style.display = "inline-block"
+         
+      }
+      </script>
 </body>
 
 </html>
