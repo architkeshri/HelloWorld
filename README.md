@@ -1,5 +1,5 @@
 <h1 align="center">Hack36 Project: MNNIT Sangam</h1>
-<h2 align="center">Theme: Life in Pandemic Sangam</h2>
+<h2 align="center">Theme: Life in Pandemic</h2>
 <p align="center">
 </p>
 
@@ -7,11 +7,14 @@
 
 
 ## Introduction:
-   MNNIT Sangam is an online platform for the MNNITians where they can interact even beyond the formal and physical barriers otherwise imposed due to the pandemic. It is a one stop solution to get all your college related queries answered and stay up-to-date with the college activities including clubs. 
-It also plans to incorporate a feature to track the daily progress of the individuals so as to keep them motivated and help them organize better!
+### Inspiration
+   Covid-19 pandemic has left us all cheerless about many things, one of which was the smothered curiousity and excitement of freshers about going to their new college. The newbies found it a little difficult to connect with their peers online, ask queries and make connections beyond the classrooms. This led us to the creation of MNNIT Sangam.  
+### Solution
+   MNNIT Sangam is an online platform for the MNNITians where they can interact even beyond the formal and physical barriers otherwise imposed due to the pandemic. It is a one stop solution to 
+   1. Get all your college related queries answered and 
+   2. Stay up-to-date with the college activities including clubs. 
+It also plans to incorporate a feature to track the daily progress of the individuals so as to keep them motivated and help them organize their college life in a better and efficient way!
   
-## Table of Contents:
-
 ## Technology Stack:
   1) Node.JS
   2) Express.JS
@@ -32,5 +35,4 @@ Team Name: Hello World!
 * [Ojasvi Gupta](https://github.com/coder-oj)
 
 
-### Made at:
-<a href="https://hack36.com"> <img src="http://bit.ly/BuiltAtHack36" height=20px> </a>
+### Made at: <a href="https://hack36.com"> <img src="http://bit.ly/BuiltAtHack36" height=20px> </a>
