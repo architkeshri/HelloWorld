@@ -13,6 +13,7 @@
    MNNIT Sangam is an online platform for the MNNITians where they can interact even beyond the formal and physical barriers otherwise imposed due to the pandemic. It is a one stop solution to 
    1. Get all your college related queries answered and 
    2. Stay up-to-date with the college activities including clubs. 
+
 It also plans to incorporate a feature to track the daily progress of the individuals so as to keep them motivated and help them organize their college life in a better and efficient way!
   
 ## Technology Stack:
