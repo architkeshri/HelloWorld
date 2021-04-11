@@ -35,5 +35,9 @@ Team Name: Hello World!
 * [Prakhar Gupta](https://github.com/Prakhar1106)
 * [Ojasvi Gupta](https://github.com/coder-oj)
 
+### Video and PPT
+
+* [Presentation](https://drive.google.com/file/d/14orHQCZG1sgK6s-tMEv21Fxt29-6U6cU/view?usp=sharing)
+* [Video](https://youtu.be/CrtPM8L8QxE)
 
 ### Made at: <a href="https://hack36.com"> <img src="http://bit.ly/BuiltAtHack36" height=20px> </a>
